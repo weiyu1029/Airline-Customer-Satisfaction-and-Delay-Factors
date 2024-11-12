@@ -1,0 +1,49 @@
+# Airline Customer Satisfaction and Delay Analysis
+
+This project analyzes factors affecting airline customer satisfaction and delay times using Python. It involves data ingestion, transformation, analysis, and visualization, providing insights into how various delays impact customer satisfaction. This workflow is designed to guide you through setting up and executing the analysis, including instructions for running the code.
+
+---
+
+## Project Structure
+
+- **Data**: A CSV file (`airline_data.csv`) containing synthetic data on flight delays, customer satisfaction, and flight characteristics.
+- **Script**: A Python script that reads data, processes it, performs analysis, and generates visualizations.
+- **Output**: Analytical insights on delay correlations with customer satisfaction and average delays by airline and flight duration category.
+
+---
+
+## Prerequisites
+
+- **Python** 3.7 or higher
+- Python libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`
+- Ensure `airline_data.csv` is in the root directory or provide the path in the script.
+
+---
+
+## Dataset Description
+
+The dataset (`airline_data.csv`) includes the following columns:
+
+- `FlightID`: Unique identifier for each flight
+- `DepartureDelay`: Departure delay in minutes
+- `ArrivalDelay`: Arrival delay in minutes
+- `CustomerSatisfaction`: Satisfaction rating (1-5)
+- `FlightDuration`: Duration of the flight in minutes
+- `Airline`: Airline identifier (categorical)
+- `Destination`: Flight destination (categorical)
+- `FlightDate`: Date of the flight
+
+---
+
+## Project Workflow
+
+### 1. Import Libraries
+
+Ensure all necessary libraries are installed:
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import pearsonr
